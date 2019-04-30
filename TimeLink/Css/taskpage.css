@@ -1,0 +1,14 @@
+﻿table {
+table-layout:fixed;
+width:600px;
+border:0.5px black solid;
+}
+
+caption {
+    text-align: left;
+}
+
+td.name {
+    vertical-align: top;
+    width:100px;
+}

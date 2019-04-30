@@ -1,42 +1,36 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TimeLink._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TimeLink.Default" EnableEventValidation="false" %>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<!DOCTYPE html>
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Login page</title>
+    <link rel="stylesheet" href="~/css/default.css" type="text/css" />
+    <link rel="shortcut icon" href="~/Img/appIcon3.png" type="image/x-icon" />
+</head>
+<body>
+    <form id="login_form" runat="server">
+        <div class="login" style="width: 800px;">
+            <p style="background-color: orangered; padding-left: 0px; padding-top: 0px;">
+                <asp:Label ID="lblError" runat="server"></asp:Label>
             </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
+            <ul>
+                <li>
+                    <asp:Label ID="lblEmail" runat="server" Text=" Email: " AssociatedControlID="tbxEmail">Email: </asp:Label>
+                    <asp:TextBox ID="tbxEmail" runat="server" TextMode="Email" placeholder="your@email.com"></asp:TextBox>
+                </li>
+                <li>
+                    <asp:Label ID="lblPassword" runat="server" Text=" Password: " AssociatedControlID="tbxPassword">Password: </asp:Label>
+                    <asp:TextBox ID="tbxPassword" runat="server" TextMode="Password" placeholder="password"></asp:TextBox>
+                </li>
+                <li>
+                    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+                </li>
+                <li>
+                    <asp:Button ID="btnRegistration" runat="server" Text="Registration" PostBackUrl="_RegistrationPage.aspx" />
+                </li>
+            </ul>
         </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
-
-</asp:Content>
+    </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿.logout {
+    width: 800px;
+    height: 0px;
+    padding-bottom: 20px;
+}
+
+.goalName {
+    width: 800px;
+    border-top: 1px solid black;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.filters {
+    width: 800px;
+    border-top: 1px solid black;
+}
+
+.table {
+    width: 800px;
+}
+
+.paging {
+    float: right;
+}
+
+.buttons {
+    width: 800px;
+    border-top: 1px solid black;
+}
+
+    .buttons li {
+        display: inline-block;
+    }
+
+ul {
+    list-style: none;
+}
+
+.logout li {
+    display: inline; 
+    float: right;
+}
+
+.login li {
+    display: inline-block; 
+    float: left; 
+    padding-right: 5px;
+}
